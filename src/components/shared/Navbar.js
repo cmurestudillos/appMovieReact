@@ -7,8 +7,13 @@ import { Link } from 'react-router-dom';
 import { Title } from '../../components/Title';
 
 export class NavBar extends Component {
-    
+  //----------------------------------------------------------------------//
+  // Metodo Render                                                        //
+  //----------------------------------------------------------------------//    
   render () {
+    // Log de seguimiento
+    console.log("Navbar.js - Metodo render");   
+     
     return (
       <nav className="navbar navbar-dark blue-gradient fixed-top">
         <Link className="navbar-brand" to="/">

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-
-//Constante
-const API_KEY = '2c075e7b';
+// API KEY
+import OMDBKey from './../config/apikey';
 
 export class SearchForm extends Component {
   state = {
@@ -16,7 +15,7 @@ export class SearchForm extends Component {
     e.preventDefault()
     const { inputMovie } = this.state
 
-    fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${inputMovie}`)
+    fetch(`http://www.omdbapi.com/?apikey=${OMDBKey.apiKey}&s=${inputMovie}`)
       .then(res => res.json())
       .then(results => {
         const { Search = [], totalResults = "0" } = results
@@ -24,8 +23,13 @@ export class SearchForm extends Component {
         this.props.onResults(Search)
       })
   }
-
+  //----------------------------------------------------------------------//
+  // Metodo render                                                        //
+  //----------------------------------------------------------------------//
   render () {
+    // Log de seguimiento
+    console.log("SearchForm.js - Metodo render");
+
     return (
       <div className="float-right mt-3">
         <form onSubmit={this._handleSubmit} className="form-inline text-white">

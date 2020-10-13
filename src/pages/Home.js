@@ -16,10 +16,15 @@ export class Home extends Component {
           <i className="fas fa-exclamation-triangle fa-2x"></i><strong> - No se han encontrado resultados. </strong>
       </div> : <MoviesList movies={this.state.results} />
   }
-
+  //----------------------------------------------------------------------//
+  // Metodo render                                                        //
+  //----------------------------------------------------------------------//
   render () {
+    // Log de seguimiento
+    console.log("Home.js - Metodo render");   
+     
     return (
-      <div>
+      <div className="container">
         <div className='fixed-top'>
           <SearchForm onResults={this._handleResults} />
         </div>

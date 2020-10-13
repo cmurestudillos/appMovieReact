@@ -41,21 +41,16 @@
   /* margin: 100px; */
 }
 
-/*----- Listado de peliculas ----------------------*/
-.MoviesList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 16px;
-  margin:7em;
+.card-columns{
+  margin-top: 120px;
+  margin-bottom: 50px;
 }
-
-.MoviesList-item {
-  margin: 25px;
-}
-
 .card{
   border-radius: 25px;
+}
+.card img{
+  padding: 15px;
+  border-radius: 7%;
 }
 
 .detalle{
@@ -69,7 +64,8 @@
 }
 /*-------------- Home  -----------------------*/
 .alert {
-  margin:8em;
+  margin-top: 120px;
+  /*margin:8em;*/
 }
 .alert i{
   margin: 10px;

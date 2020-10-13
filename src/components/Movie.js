@@ -13,23 +13,23 @@ export class Movie extends Component {
     poster: PropTypes.string
   }
 
+  //----------------------------------------------------------------------//
+  // Metodo para generar datos aleatorios en la grafica                   //
+  //----------------------------------------------------------------------//
   render () {
+    // Log de seguimiento
+    console.log("Movie.js - Metodo render");
+
     const { id, poster, title, year } = this.props
 
     return (
-      <Link to={`/detail/${id}`} className="card">
-        <div class="card card-cascade wider">
-            <div class="view view-cascade overlay">
-              <img alt={title} src={poster === 'N/A' ? noimage : poster} class="card-img-overlay" ></img>
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <div class="card-body card-body-cascade text-center pb-0">
-              <h4 class="card-title"><strong>{title}</strong></h4>
-              <h5 class="blue-text pb-2"><strong>{year}</strong></h5>
-            </div>
+      <Link to={`/detail/${id}`}>
+        <div>
+          <img alt={title} src={poster === 'N/A' ? noimage : poster} className="card-img-top" ></img>
+          <div class="card-body">
+            <h4 className="card-title"><strong>{title}</strong></h4>
+            <h5 className="card-text"><strong>{year}</strong></h5>
+          </div>        
         </div>
       </Link>
     )

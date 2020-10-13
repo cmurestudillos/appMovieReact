@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 // Componente
 import { BotonVolver } from '../components/BotonVolver';
 
-// Constante
-const API_KEY = '2c075e7b';
+// API KEY
+import OMDBKey from './../config/apikey';
 
 export class Detail extends Component {
   static propTypes = {
@@ -19,7 +19,7 @@ export class Detail extends Component {
   state = { movie: {} }
 
   _fetchMovie ({ id }) {
-    fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`)
+    fetch(`http://www.omdbapi.com/?apikey=${OMDBKey.apiKey}&i=${id}`)
       .then(res => res.json())
       .then(movie => {
         console.log({ movie })
