@@ -11,6 +11,9 @@ import { Footer } from './components/shared/Footer';
 import { NavBar } from './components/shared/Navbar';
 
 class App extends Component {
+  //----------------------------------------------------------------------//
+  // Metodo para generar datos aleatorios en la grafica                   //
+  //----------------------------------------------------------------------//  
   render() {
     return (
       <div className="App">

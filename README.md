@@ -1,4 +1,4 @@
-# Buscador de películas
+# Buscador de películas - React.js
 
 Buscador de películas creado con **React.js** que consume la API de OMDb (The Open Movie Database).
 
