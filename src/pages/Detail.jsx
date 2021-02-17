@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // Componente
 import { BotonVolver } from '../components/BotonVolver';
 // API KEY
-import OMDBKey from './../config/apikey';
+import OMDBKey from './../api/apikey';
 
 export class Detail extends Component {
   static propTypes = {

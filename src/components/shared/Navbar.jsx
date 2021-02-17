@@ -4,7 +4,7 @@ import logo from '../../assets/img/logo.png';
 // Elementos
 import { Link } from 'react-router-dom';
 // Componentes
-import { Title } from '../../components/Title';
+import { Title } from '../Title';
 
 export class NavBar extends Component {
   //----------------------------------------------------------------------//

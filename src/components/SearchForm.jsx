@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // API KEY
-import OMDBKey from './../config/apikey';
+import OMDBKey from './../api/apikey';
 
 export class SearchForm extends Component {
   state = {
